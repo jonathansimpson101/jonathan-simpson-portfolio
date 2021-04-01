@@ -1,0 +1,338 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+/*Utility */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  max-width: 1100px;
+}
+
+a{
+  text-decoration:none;
+  color:black;
+}
+
+/*profile*/
+.profile{
+  position: relative;
+  top: 20px;
+  width: 80vw;
+  display:grid;
+  grid-auto-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.profile-picture{
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-image: url('images/profile.jpeg');
+  justify-self: start;
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.introduction{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: center;
+}
+
+.btn{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.btn > a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/*Featured*/
+section.featured{
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  margin-top: 40px;
+  background-image: linear-gradient(-45deg, grey, lightgrey, darkgrey, lightgrey);
+  background-size: 400% 400%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  animation-name: backgroundAnimate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+}
+
+@keyframes backgroundAnimate {
+  0%{
+    background-position: 0 50%
+  }
+  50%{
+   background-position: 100% 50%
+  }
+  100%{
+    background-position: 0 50%
+  }
+}
+
+#featured-title{
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.featured-container{
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 1100px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.featured-item{
+  border-radius: 5px;
+  background-color: white;
+  width: 300px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: 1px solid black;
+}
+
+.featured-item:hover{
+  transform: scale(0.98);
+}
+
+.featured-image{
+  height: 150px;
+  background-image: url('images/profile.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.featured-description{
+  padding: 10px;
+}
+
+.featured-image-1{
+  background-image: url('images/portfolioCovers/flashcard.png');
+}
+
+.featured-image-2{
+  background-image: url('images/portfolioCovers/cabin.png');
+}
+
+.featured-image-3{
+  background-image: url('images/portfolioCovers/drumkit.png');
+}
+
+.featured-description{
+  text-align: center;
+}
+
+
+/*Collection*/
+.collection{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.collection-container{
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 1100px;
+  display:grid;
+  justify-items:center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.collection-item{
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: white;
+  width: 300px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.collection-item:hover{
+  transform: scale(0.98);
+}
+
+.collection-image{
+  height: 150px;
+  background-image: url('images/profile.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.collection-description{
+  text-align: center;
+  padding: 10px;
+}
+
+.collection-item-1 > .collection-image{
+  background-image: url('images/portfolioCovers/clock.png');
+}
+
+.collection-item-2 > .collection-image{
+  background-image: url('images/portfolioCovers/circle.png');
+}
+
+.collection-item-3 > .collection-image{
+  background-image: url('images/portfolioCovers/gradient-loader.png');
+}
+
+.collection-item-4 > .collection-image{
+  background-image: url('images/portfolioCovers/progress.png');
+}
+
+.collection-item-5 > .collection-image{
+  background-image: url('images/portfolioCovers/rotate.png');
+}
+
+.collection-item-6 > .collection-image{
+  background-image: url('images/portfolioCovers/expanding.jpg');
+}
+
+.collection-item-7 > .collection-image{
+  background-image: url('images/portfolioCovers/loruki.png');
+}
+
+.collection-item-8 > .collection-image{
+  background-image: url('images/portfolioCovers/hiking.png');
+}
+
+.collection-item-9 > .collection-image{
+  background-image: url('images/portfolioCovers/creative-agency.png');
+}
+
+.collection-item-10 > .collection-image{
+  background-image: url('images/portfolioCovers/woofer.png');
+}
+
+.collection-item-11 > .collection-image{
+  background-image: url('images/portfolioCovers/parallax.png');
+}
+
+.collection-item-12 > .collection-image{
+  background-image: url('images/portfolioCovers/blurry-loading.png');
+}
+
+.collection-item-13 > .collection-image{
+  background-image: url('images/portfolioCovers/scrolling-effect.png');
+}
+
+.collection-item-14 > .collection-image{
+  background-image: url('images/portfolioCovers/consoles.png');
+}
+
+.collection-item-15 > .collection-image{
+  background-image: url('images/portfolioCovers/bouncy.png');
+}
+
+.collection-item-16 > .collection-image{
+  background-image: url('images/portfolioCovers/dadjokes.png');
+}
+
+.collection-item-17 > .collection-image{
+  background-image: url('images/portfolioCovers/trainers.png');
+}
+
+.collection-item-18 > .collection-image{
+  background-image: url('images/portfolioCovers/mouseover.png');
+}
+
+
+
+/*Footer*/
+.footer{
+  margin-top: 60px;
+  width:100vw;
+  background-color: #ddd;
+  height: 100px;
+}
+
+.footer-container{
+  width: 60vw;
+  margin: 0 auto;
+  max-width: 1100px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+i{
+  font-size: 2rem;
+}
+
+
+/*responsiveness*/
+@media(max-width: 1162px){
+  .featured-container{
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
+
+  .featured-item{
+    margin-top: 10px;
+  }
+
+  .collection-container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media(max-width: 768px){
+  .profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .introduction{
+    margin-top: 5px;
+  }
+
+  .btn{
+   margin-top: 5px;
+  }
+
+  .collection-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
